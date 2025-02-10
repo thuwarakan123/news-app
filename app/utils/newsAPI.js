@@ -1,5 +1,5 @@
 export async function fetchTopHeadlines() {
-    const apiKey = process.env.PUBLIC_NEWS_API_KEY || "f5ff3c279c7b464e88e596795d69b7e8";
+    const apiKey = process.env.NEXT_PUBLIC_NEWS_API_KEY;
     const url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`;
   
     try {
@@ -14,4 +14,4 @@ export async function fetchTopHeadlines() {
       console.error("Error fetching news:", error);
       return [];
     }
-  }
+}
